@@ -1,0 +1,45 @@
+RewriteEngine On
+
+php_value output_buffering On
+
+php_value output_handler mb_output_handler
+
+Options -Indexes
+
+RewriteBase /
+
+RewriteRule .htaccess - [F]
+
+RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^([a-zA-Z0-9\/\-_]+)$ index.php [L,QSA]
+
+ErrorDocument 404 /errors/404.html
+ErrorDocument 403 /errors/403.html
+
+# 400 - Bad Request
+# 401 - Unauthorized
+# 402 - Payment Required
+# 403 - Forbidden
+# 404 - Not Found
+# 405 - Method Not Allowed
+# 406 - Not Acceptable
+# 407 - Proxy Authentication Required
+# 408 - Request Time-out
+# 409 - Conflict
+# 410 - Gone
+# 411 - Length Required
+# 412 - Precondition Failed
+# 413 - Request Entity Too Large
+# 414 - Request-URI Too Large
+# 415 - Unsupported Media Type
+# 500 - Internal Server Error
+# 501 - Not Implemented
+# 502 - Bad Gateway
+# 503 - Service Unavailable
+# 504 - Gateway Time-out
+# 505 - HTTP Version not supported
