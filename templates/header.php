@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
     <link rel="stylesheet" href="/static/lib/normalize.min.css">
-    <style>
+<!--     <style>
 body {
     background-repeat: no-repeat;
     /*background-position: center center;*/
@@ -14,7 +14,6 @@ body {
     background-attachment: fixed;
     background-image: url("/static/img/main-backgroun-blur.png");
 }
-    </style>
+    </style> -->
 </head>
 <body>
-<h1>HEADER</h1>
