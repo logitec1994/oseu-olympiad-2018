@@ -6,14 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
     <link rel="stylesheet" href="/static/lib/normalize.min.css">
-<!--     <style>
-body {
-    background-repeat: no-repeat;
-    /*background-position: center center;*/
-    background-size: 100%;
-    background-attachment: fixed;
-    background-image: url("/static/img/main-backgroun-blur.png");
-}
-    </style> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Racing+Sans+One|Roboto" rel="stylesheet">
 </head>
 <body>

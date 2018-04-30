@@ -1,48 +1,53 @@
 <?php
 include_once 'templates/header.php'
 ?>
+<!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
 
-<div class="main">
-    <div class="header">
-        <nav class="navigation">
-            <ul>
-                <li><a href="/main">Главная</a></li>
-                <li><a href="/quests">Квесты</a></li>
-                <li><a href="/about">О нас</a></li>
-            </ul>
-        </nav>
-        <div class="role-buttons">
-            <ul>
-                <li><a href="#">Вход</a></li>
-                <li><a href="#">Регистрация</a></li>
-            </ul>
+<div class="main grid">
+    <nav class="navigation grid-item1">
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/quests">Квесты</a></li>
+            <li><a href="/about">О нас</a></li>
+        </ul>
+    </nav>
+    <div class="role-buttons grid-item2">
+        <ul>
+            <li><a href="#">Вход</a></li>
+            <li><a href="#">Регистрация</a></li>
+        </ul>
+    </div>
+    <div class="content grid-item3">
+        <div class="logo"></div>
+        <div class="text">
+            <p>Проект "Абитуриент"</p>
+            <p>ОГЭКУ</p>
+            <p>Пройди путь от абитуриента до студента нашего университета</p>
         </div>
     </div>
-    <div class="clear"></div>
-    <main class="content">
-        <div class="logo"></div>
-        <div class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, quis! Dignissimos aperiam tenetur error ipsam natus adipisci. Nemo necessitatibus esse provident inventore, in cupiditate! Mollitia praesentium aut non nesciunt excepturi!</div>
-    </main>
+    <div class="form grid-item4">
+        <form action="/registration" method="post" id="registration-form">
+            <p>Регистрация</p>
+            <input type="text" name="lastname" placeholder="Введите фамилию...">
+            <input type="text" name="firstname" placeholder="Введите имя...">
+            <input type="text" name="patronymic" placeholder="Введите отчество...">
+            <input type="email" name="email" placeholder="Ведите E-mail...">
+            <input type="password" name="password" placeholder="Введите пароль...">
+            <input type="password" name="re-password" placeholder="Повторите пароль...">
+            <input type="submit" value="Регистрация" name="registration">
+        </form>
+        <form action="/login" method="post" id="login-form">
+            <p>Вход</p>
+            <input type="email" name="email" placeholder="Введите E-mail...">
+            <input type="password" name="password" placeholder="Введите пароль...">
+            <input type="submit" value="Вход" name="login">
+        </form>
+    </div>
 </div>
 
-<form action="/registration" method="post">
-    <input type="text" name="lastname" id="lastname" placeholder="Введите фамилию...">
-    <input type="text" name="name" id="name" placeholder="Введите имя...">
-    <input type="text" name="patronymic" id="patronymic" placeholder="Введите отчество...">
-    <input type="email" name="email" id="email" placeholder="Ведите E-mail...">
-    <input type="password" name="password" id="password" placeholder="Введите пароль...">
-    <input type="password" name="re-password" id="re-password" placeholder="Повторите пароль...">
-    <input type="submit" value="Регистрация">
-</form>
-<form action="/login" method="post">
-    <input type="email" name="email" id="email" placeholder="Введите E-mail...">
-    <input type="password" name="password" id="password" placeholder="Введите пароль...">
-    <input type="submit" value="Вход">
-</form>
-
-<!-- <form action="#"></form> -->
-
 <link rel="stylesheet" href="/static/styles/main.css">
+
 
 <?php
 include_once 'templates/footer.php'
