@@ -1,0 +1,27 @@
+
+body div.notify-msg
+{
+    background: rgba(0,0,0, .5);
+    width: 300px;
+    min-height: 50px;
+    height: auto;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+    z-index: 99;
+}
+
+body div.notify-msg div.notify-msg-title
+{
+    background: #3F3F3F;
+    padding: 2px 5px 2px 5px;
+    font-size: .8em;
+    font-weight: bold;
+}
+
+body div.notify-msg div.notify-msg-body
+{
+    font-size: .7em;
+    padding: 2px 5px 2px 5px;
+}
