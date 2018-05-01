@@ -38,8 +38,9 @@ class CLogin extends CControllerBase
         });
 
         $message = "ok,login";
+        $redirectTo = "/";
 
-        if (!!$filtred)
+        if (!$filtred)
         {
             $cookie = CLogin::makeCookie($email, $password);
             if ($this->model->login($email, $password, $cookie))
@@ -49,14 +50,16 @@ class CLogin extends CControllerBase
             else
             {
                 $message = "error,login";
+                $redirectTo = "/authorization";
             }
         }
         else
         {
             $message = "error,fields";
+            $redirectTo = "/authorization";
         }
 
         setcookie("msg", $message);
-        CRouter::redirect("/");
+        CRouter::redirect($redirectTo);
     }
 }

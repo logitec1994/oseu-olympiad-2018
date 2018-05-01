@@ -12,10 +12,6 @@ class CQuest extends CControllerBase
     {
     }
 
-    function __destruct()
-    {
-    }
-
     public function get($args)
     {
         $this->render("quest");

@@ -12,10 +12,6 @@ class CError extends CControllerBase
     {
     }
 
-    function __destruct()
-    {
-    }
-
     public function get($args)
     {
     }

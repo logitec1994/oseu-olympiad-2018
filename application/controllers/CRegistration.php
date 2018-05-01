@@ -41,7 +41,7 @@ class CRegistration extends CControllerBase
         {
             if (!$this->model->checkMailExists($email))
             {
-                if(!$this->model->register($firstName, $lastName, $password, $email, $password))
+                if(!$this->model->register($firstName, $lastName, $patronymic, $email, $password))
                 {
                     $message = "error,registration";
                 }
@@ -57,6 +57,6 @@ class CRegistration extends CControllerBase
         }
 
         setcookie("msg", $message);
-        CRouter::redirect("/");
+        CRouter::redirect('/authorization');
     }
 }
