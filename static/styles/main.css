@@ -8,12 +8,6 @@
     border: 1px solid red;
 }
 
-*
-{
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Montserrat', sans-serif;
-}
-
 body
 {
     background-image: url(../img/main-backgroun-blur.png);
@@ -23,13 +17,19 @@ body
     background-repeat: no-repeat;
 }
 
+body *
+{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
 form
 {
+    /*display: none;*/
     width: 350px;
     text-align: center;
     padding: 4px;
     background-color: rgba(250, 250, 250, 0.9);
-    font-family: 'Roboto', sans-serif;
     font-weight: regular;
 }
 
@@ -37,6 +37,7 @@ form input
 {
     background: rgba(20, 20, 20, 0.2);
     border: none;
+    box-shadow: 0px 0px 1px 1px #888;
     margin: 3px;
     padding: 4px;
     width: 220px;
@@ -57,7 +58,7 @@ form input
 
 form input[type="submit"]
 {
-    background: rgb(130, 130, 130);
+    background: rgb(75, 75, 75);
     margin-top: 7px;
     border: none;
     width: 150px;
@@ -69,9 +70,9 @@ div.grid
     display: grid;
     grid-column-gap: 20px;
     grid-template-areas: 
-        "navigation role-buttons"
-        "content form"
-        "content form";
+        "navigation . role-buttons"
+        ". content form"
+        /*"content content";*/
 }
 
 .navigation
@@ -86,17 +87,14 @@ div.grid
     grid-area: role-buttons;
 }
 
+.role-buttons
+{
+    margin-right: 40px;
+}
 .content
 {
     justify-self: center;
     grid-area: content;
-}
-
-.content .text
-{
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
 }
 
 @font-face {
@@ -106,15 +104,22 @@ div.grid
 
 .content .text p:nth-child(2)
 {
-    font-weight: bold;
+    /*font-weight: bold;*/
     font-size: 2.2em;
     font-family: Impact;
+    letter-spacing: 25px;
 }
 
 .form
 {
     justify-self: center;
     grid-area: form;
+}
+
+form p
+{
+    font-weight: bold;
+    color: #333;
 }
 div.content div.logo
 {
@@ -124,11 +129,20 @@ div.content div.logo
     display: inline-block;
 }
 
+div.content div.logo2
+{
+    width: 336px;
+    height: 200px;
+    display: inline-block;
+    background-image: url(../img/header_fkn.png);
+}
+
 .grid-item3
 {
     display: grid;
-    grid-template-columns: 220px minmax(350px, 450px);
+    grid-template-columns: 220px 250px 336px;
     align-items: center;
+    justify-items: center;
 }
 
 .navigation ul,
@@ -145,15 +159,10 @@ div.content div.logo
     margin: 2px;
 }
 
-.role-buttons
-{
-    margin-right: 40px;
-}
 
 .navigation ul li a,
 .role-buttons ul li a
 {
-    color: white;
     text-decoration: none;
 }
 

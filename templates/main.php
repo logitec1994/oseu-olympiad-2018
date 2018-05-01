@@ -1,9 +1,6 @@
 <?php
 include_once 'templates/header.php'
 ?>
-<!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
-<link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
-
 <div class="main grid">
     <nav class="navigation grid-item1">
         <ul>
@@ -25,6 +22,7 @@ include_once 'templates/header.php'
             <p>ОГЭКУ</p>
             <p>Пройди путь от абитуриента до студента нашего университета</p>
         </div>
+        <div class="logo2"></div>
     </div>
     <div class="form grid-item4">
         <form action="/registration" method="post" id="registration-form">
@@ -37,12 +35,12 @@ include_once 'templates/header.php'
             <input type="password" name="re-password" placeholder="Повторите пароль...">
             <input type="submit" value="Регистрация" name="registration">
         </form>
-        <form action="/login" method="post" id="login-form">
+        <!-- <form action="/login" method="post" id="login-form">
             <p>Вход</p>
             <input type="email" name="email" placeholder="Введите E-mail...">
             <input type="password" name="password" placeholder="Введите пароль...">
             <input type="submit" value="Вход" name="login">
-        </form>
+        </form> -->
     </div>
 </div>
 
