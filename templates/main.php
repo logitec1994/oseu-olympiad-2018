@@ -51,7 +51,6 @@ include_once 'templates/header.php'
     </main>
     <div class="msg-wrap">
         <div class="msg">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium fuga asperiores dolorum animi qui temporibus numquam dolorem a ducimus modi et, quidem nostrum eum, illum magni! Voluptate minima maxime voluptas!
         </div>
     </div>
 
