@@ -14,6 +14,7 @@ class CAuthorization
 
         this.mStatuses = {
             "ok/registration": "Регистация прошла успешно, войдите.",
+
             "error/registration": "Сервера при регистрации.",
             "error/exists": "Эта электронная почта уже используется.",
             "error/fields": "Не все поля заполнены правильно.",
