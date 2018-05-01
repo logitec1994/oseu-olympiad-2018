@@ -11,7 +11,7 @@ ini_set('session.name', "sid");
 date_default_timezone_set("Europe/Kiev");
 
 // Включаем отладку движка
-define("ENGINE_DEBUG", true);
+define("ENGINE_DEBUG", false);
 
 // Подключаем роутер
 include_once 'application/core/CRouter.php';
@@ -21,9 +21,14 @@ $app = new CRouter();
 
 // Задаем маршруты указывающие на страницы
 $app->add("^/$",               "main");
-$app->add("^/error/(40[3-5])$","error");
+$app->add("^/authorization$",  "authorization");
+$app->add("^/registration$",   "registration");
+$app->add("^/login$",          "login");
+$app->add("^/logout$",         "logout");
 $app->add("^/quests$",         "quests");
 $app->add("^/quest/([1-3])$",  "quest");
+$app->add("^/about$",          "about");
+$app->add("^/error/(40[3-5])$","error");
 
 // Запускаем роутер
 $app->run();
