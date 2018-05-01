@@ -30,7 +30,7 @@ class CRouter
     public function add($regex, $page, $args = array())
     {
         array_push($this->handlers, (object)array(
-            'object' => NULL,
+            'object' => null,
             'page' => $page,
             'name' => $regex,
             'args' => $args
@@ -70,7 +70,6 @@ class CRouter
 
     private function getRequestedHandler()
     {
-
         foreach ($this->handlers as $handler)
         {
             if (preg_match(sprintf("|%s|", $handler->name), self::getUrl(), $matches))

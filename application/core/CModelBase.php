@@ -4,7 +4,7 @@ include_once "application/config/DataBase.php";
 
 class CModelBase
 {
-    private $link = null;
+    protected $link = null;
 
     function __construct()
     {

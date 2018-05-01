@@ -3,6 +3,7 @@
 
 abstract class CControllerBase
 {
+    abstract function __construct($page);
 
     public function run($args)
     {
@@ -22,9 +23,4 @@ abstract class CControllerBase
             throw new Exception("Method \"{$_SERVER["REQUEST_METHOD"]}\" Not Allowed", 405);
         }
     }
-
-
-    abstract public function get($args);
-
-    abstract public function post($args);
 }

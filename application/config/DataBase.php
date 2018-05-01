@@ -1,6 +1,6 @@
 <?php
 
-define('ENGINE_DATABASE_HOST',     "localhost");
-define('ENGINE_DATABASE_NAME',     "enrollee");
-define('ENGINE_DATABASE_LOGIN',    "enrollee");
-define('ENGINE_DATABASE_PASSWORD', "PhooZie6Ipef4Thoo7febecho0aechu4");
+define('ENGINE_DATABASE_HOST',     "10.10.10.100");
+define('ENGINE_DATABASE_NAME',     "enrollee_db");
+define('ENGINE_DATABASE_LOGIN',    "root");
+define('ENGINE_DATABASE_PASSWORD', "1234");
