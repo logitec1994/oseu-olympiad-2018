@@ -1,6 +1,12 @@
 <?php
 include_once 'templates/header.php'
 ?>
+<link rel="stylesheet" href="/static/styles/authorization.css">
+<link rel="stylesheet" href="/static/lib/notify/notify.css">
+
+<script src="/static/lib/notify/notify.js"></script>
+<script src="/static/lib/cookies.js"></script>
+<script src="/static/javascript/authorization.js"></script>
 
 <form action="/registration" method="post" id="registration-form">
     <p>Регистрация</p>
@@ -18,7 +24,7 @@ include_once 'templates/header.php'
     <input type="password" name="password" placeholder="Введите пароль...">
     <input type="submit" value="Вход" name="login">
 </form>
-<link rel="stylesheet" href="/static/styles/form.css">
+
 <?php
 include_once 'templates/footer.php'
 ?>

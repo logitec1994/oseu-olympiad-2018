@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
     <link rel="stylesheet" href="/static/lib/normalize.min.css">
+    <link rel="stylesheet" href="/static/styles/global.css">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <script src="/static/lib/jquery-3.3.1.min.js"></script>
 </head>
 <body>
