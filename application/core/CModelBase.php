@@ -24,6 +24,36 @@ class CModelBase
         {
             throw new Exception("Model can't set encoding: {$this->link->error}");
         }
+
+        $this->createTables();
+    }
+
+    private function createTables()
+    {
+        // Temporary tables creation.
+
+        $users = "CREATE TABLE IF NOT EXISTS enrollee_db.users
+        (
+          id INT PRIMARY KEY AUTO_INCREMENT,
+          email VARCHAR(64) UNIQUE NOT NULL,
+          firstname VARCHAR(64) NOT NULL,
+          lastname VARCHAR(64) NOT NULL,
+          patronymic VARCHAR(64) NOT NULL,
+          password CHAR(40) NOT NULL 
+        );";
+
+        $sessions = "CREATE TABLE IF NOT EXISTS enrollee_db.sessions
+        (
+          id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+          uiid INT NOT NULL,
+          cookie CHAR(40) NOT NULL,
+          stamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+        
+          FOREIGN KEY (uiid) REFERENCES users (id)
+        );";
+
+        $this->link->query($users);
+        $this->link->query($sessions);
     }
 
     function __destruct()
