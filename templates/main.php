@@ -1,55 +1,41 @@
 <?php
 include_once 'templates/header.php'
 ?>
-    <header class="header">
-        <div class="wrap">
-            <nav class="menu">
-                <ul>
-                    <li><a href="/">Главная</a></li>
-                    <li><a href="/quests">Квесты</a></li>
-                    <li><a href="/authorization">Авторизация</a></li>
-                    <li><a href="/about">О нас</a></li>
-                </ul>
-            </nav>
-            <span>Уведомления: 1</span>
-        </div>
-    </header>
-    <div class="clear"></div>
-    <main class="content">
-        <div class="univer">
-            <div class="un-logo"></div>
-            <div class="un-disc">
-                <h2>Описание универа</h2>
-                <p>Ведучий вуз в системі вищої екологічного та гідрометеорологічної освіти України, базовий вуз Міністерства екології та природних ресурсів України. В університеті ведеться підготовка фахівців з вищою освітою (молодший спеціаліст, бакалавр, спеціаліст, магістр, кандидат і доктор наук) за напрямами підготовки: «Гідрометеорологія», «Військова гідрометеорологія», «Екологія», «Менеджмент», «Комп'ютерні науки» та інші . ОДЕКУ здійснює науково-методичне керівництво розробкою на Україні навчальних планів, програм, підручників і навчально-методичних посібників за спеціальностями гідрометеорологічного та екологічного напрямків підготовки.</p>
-            </div>
-        </div>
-        <div class="clear"></div>
-        <div class="fac">
-            <div class="fac-logo"></div>
-            <div class="fac-disc">
-                <h2>Описание факультета</h2>
-                <p>Приймальна комісія Одеського державного екологічного університету працює з 20 червня по 30 вересня 2018 року щоденно без вихідних з 08.50 по 18.30 год.  Прийом документів вступникі вденної та заочної форм навчання здійснюється щоденно з 9.00 по 17.00 год.  Обідня перерва з 13.00 до 13.30 год.</p>
-                <p>Приймальна комісія ОДЕКУ розташована на 1-му поверсі навчально - лабораторного No 1 за адресою:  м. Одеса,  вул. Львівська, буд. 15, каб. 101</p>
-                <p>
-                    <ul>
-                        <li>Тел.: (0482) 32-67-64, 32-67-57</li>
-                        <li>Факс: (0482) 32-67-64</li>
-                        <li>E-mail: serbov@odeku.edu.ua, abitur@odeku.edu.ua</li>
-                    </ul>
-                </p>
-                <p>Комп’ютерні науки - Інтернет програмування - ЗНО: Українська мова та література Математика Іноземна мова або Фізика. Комп’ютерні науки - Інформаційні управляючі системи та технології - ЗНО: Українська мова та література Математика Іноземна мова або Фізика.</p>
-            </div>
-        </div>
-        <div class="clear"></div>
-    </main>
-    <div class="clear"></div>
-    <div class="msg-wrap">
-        <div class="msg">
-        </div>
+
+
+<!-- slider start -->
+<div class="wrap-slider">
+    <div class="header">
+        <label for="slide-1">First Slide</label>
+        <label for="slide-2">Second Slide</label>
+        <label for="slide-3">Three Slide</label>
+        <label for="slide-4">Four Slide</label>
+        <label for="slide-5">Five Slide</label>
     </div>
+    <input type="radio" id="slide-1" name="slides" checked>
+    <section class="slide slide-one">
+        <h1>Slide1 Title</h1>        
+    </section>
+    <input type="radio" id="slide-2" name="slides">
+    <section class="slide slide-two">
+        <h1>Slide2 Title</h1>        
+    </section>
+    <input type="radio" id="slide-3" name="slides">
+    <section class="slide slide-three">
+        <h1>Slide3 Title</h1>        
+    </section>
+    <input type="radio" id="slide-4" name="slides">
+    <section class="slide slide-four">
+        <h1>Slide4 Title</h1>        
+    </section>
+    <input type="radio" id="slide-5" name="slides">
+    <section class="slide slide-five">
+        <h1>Slide4 Title</h1>        
+    </section>
+</div>
+<!-- slider end -->
 
 <link rel="stylesheet" href="/static/styles/main.css">
-
 
 <?php
 include_once 'templates/footer.php'
