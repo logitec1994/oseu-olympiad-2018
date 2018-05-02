@@ -18,15 +18,15 @@ class CAuthorization extends CControllerBase
 
     public function get($args)
     {
-        $cookie = $_COOKIE[ENGINE_SESSION_COOKIE_ID];
+        $cookie = self::getUserCookie();
 
-        if (!empty($cookie) && !$this->model->getUserByCookie($cookie))
+        if (!!$cookie && $this->model->getUserByCookie($cookie))
         {
-            $this->render("authorization");
+            CRouter::redirect("/");
         }
         else
         {
-            CRouter::redirect("/");
+            $this->render("authorization");
         }
     }
 }

@@ -23,4 +23,16 @@ abstract class CControllerBase
             throw new Exception("Method \"{$_SERVER["REQUEST_METHOD"]}\" Not Allowed", 405);
         }
     }
+
+    static public function getUserCookie()
+    {
+        $cookie = null;
+
+        if(array_key_exists(ENGINE_SESSION_COOKIE_ID, $_COOKIE))
+        {
+            $cookie = $_COOKIE[ENGINE_SESSION_COOKIE_ID];
+        }
+
+        return $cookie;
+    }
 }
