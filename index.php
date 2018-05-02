@@ -25,7 +25,7 @@ $app->add("^/authorization$",  "authorization");
 $app->add("^/registration$",   "registration");
 $app->add("^/login$",          "login");
 $app->add("^/logout$",         "logout");
-$app->add("^/quests$",         "quests");
+$app->add("^/events$",         "events");
 $app->add("^/quest/([1-3])$",  "quest");
 $app->add("^/about$",          "about");
 $app->add("^/error/(40[3-5])$","error");

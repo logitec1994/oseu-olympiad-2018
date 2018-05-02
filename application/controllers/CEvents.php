@@ -4,7 +4,7 @@ include_once 'application/core/CControllerBase.php';
 include_once 'application/core/TViewBase.php';
 
 
-class CQuests extends CControllerBase
+class CEvents extends CControllerBase
 {
     use TViewBase;
 

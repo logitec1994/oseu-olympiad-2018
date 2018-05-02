@@ -28,7 +28,7 @@ abstract class CControllerBase
     {
         $cookie = null;
 
-        if(array_key_exists(ENGINE_SESSION_COOKIE_ID, $_COOKIE))
+        if (array_key_exists(ENGINE_SESSION_COOKIE_ID, $_COOKIE))
         {
             $cookie = $_COOKIE[ENGINE_SESSION_COOKIE_ID];
         }
