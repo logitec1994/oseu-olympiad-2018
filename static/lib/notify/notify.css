@@ -1,7 +1,6 @@
+body div.notify-msg {
 
-body div.notify-msg
-{
-    background: rgba(0,0,0, .5);
+    background: #cfd8dc;
     width: 300px;
     min-height: 50px;
     height: auto;
@@ -10,18 +9,20 @@ body div.notify-msg
     top: 20px;
     display: none;
     z-index: 99;
+    box-shadow: 0 2px 5px -3px rgba(0, 0, 0, 0.7);
+
 }
 
-body div.notify-msg div.notify-msg-title
-{
-    background: #3F3F3F;
-    padding: 2px 5px 2px 5px;
+body div.notify-msg div.notify-msg-title {
+    padding: 10px 20px;
+    background: #607d8b;
     font-size: .8em;
     font-weight: bold;
+    box-shadow: 0 2px 5px -3px rgba(0, 0, 0, 0.7);
+
 }
 
-body div.notify-msg div.notify-msg-body
-{
+body div.notify-msg div.notify-msg-body {
+    padding: 15px 20px;
     font-size: .7em;
-    padding: 2px 5px 2px 5px;
 }
