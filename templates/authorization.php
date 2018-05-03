@@ -7,7 +7,6 @@ include_once 'templates/header.php'
 <script src="/static/lib/notify/notify.js"></script>
 <script src="/static/lib/cookies.js"></script>
 <script src="/static/javascript/authorization.js"></script>
-<script src="/static/javascript/form.js"></script>
 
 <div class="forms-wrapper">
     <div class="wrap">

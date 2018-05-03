@@ -143,4 +143,19 @@ class CAuthorization
 $(function () {
     let app = new CAuthorization();
     app.run();
+
+    $(".wrap").on("click", ".tab", function() {
+        $(".wrap .tab").removeClass("active");
+        $(this).addClass("active");
+    });
+
+    $(".authorization").on("click", () => {
+        $("#login-form").removeClass("hidden");
+        $("#registration-form").addClass("hidden");
+    });
+
+    $(".registration").on("click", () => {
+        $("#registration-form").removeClass("hidden");
+        $("#login-form").addClass("hidden");
+    });
 });
