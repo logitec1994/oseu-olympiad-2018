@@ -25,20 +25,15 @@ body *
 header
 {
     background-color: #336633;
+    height: 100%;
+    float: left;
 }
 
 .wrap
 {
-    width: 1200px;
-    margin: 0 auto;
+    /*width: 1200px;*/
+    /*margin: 0 auto;*/
     /*border: 1px solid;*/
-}
-
-.wrap span
-{
-    padding: 4px;
-    margin: 2px;
-    cursor: pointer;
 }
 
 .menu ul
@@ -50,7 +45,7 @@ header
 
 .menu ul li
 {
-    display: inline-block;
+    /*display: inline-block;*/
     padding: 4px;
     margin: 2px;
 }
@@ -64,19 +59,4 @@ header
 .menu ul li a:hover
 {
     text-decoration: underline;
-}
-
-.msg-wrap
-{
-    position: fixed;
-    top: 30px;
-    left: 50px;
-    background-color: rgb(200, 200, 200);
-    display: none;
-}
-
-.msg-wrap .msg
-{
-    width: 250px;
-    padding: 5px;
 }

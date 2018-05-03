@@ -18,7 +18,7 @@ class CEvents extends CControllerBase
 
     public function get($args)
     {
-        $this->render("quests");
+        $this->render("events");
     }
 
     public function post($args)

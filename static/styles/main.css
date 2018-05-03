@@ -11,38 +11,53 @@ body
 {
     height: 100%;
     width: 100%;
-    position: relative;
+    /*position: relative;*/
     overflow: hidden;
     color: white;
     text-align: center;
     background-color: #120103;
+    display: none;
 }
 
 div.header
 {
-    background-color: #3e474f;
-    box-shadow: 0 0.5em 1em #111;
+    /*background-color: #3e474f;*/
+    /*box-shadow: 0 0.5em 1em #111;*/
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     z-index: 900;
     width: 100%;
 }
 
-div.header label
+/*div.header label
 {
-    color: #788188;
+    color: #fff;
+    text-shadow: 0 0 1px black;
     cursor: pointer;
     display: inline-block;
     line-height: 4.25em;
     font-size: 1em;
     font-weight: bold;
     padding: 0 1em;
-}
+    background-color: rgba(190, 190, 190, 0.5);
+}*/
 
-div.header label:hover
+div.header label
 {
-    background-color: #2e353b;
+    border-radius: 50%;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background-color: #fff;
+}
+div.header label:before
+{
+    border-radius: 50%;
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-color: #000;    
 }
 
 .slide
@@ -73,14 +88,10 @@ div.header label:hover
 
 .slide-three
 {
-    background-image: url(../img/slider/1.jpg);
-}
-
-.slide-four
-{
+    /* Найти новую картинку!!! */
     background-image: url(../img/slider/4.jpg);
 }
-.slide-five
+.slide-four
 {
     background-image: url(../img/slider/5.jpg);
 }

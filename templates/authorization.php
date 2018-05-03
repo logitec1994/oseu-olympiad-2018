@@ -8,6 +8,10 @@ include_once 'templates/header.php'
 <script src="/static/lib/cookies.js"></script>
 <script src="/static/javascript/authorization.js"></script>
 
+<div class="forms-wrapper">
+    
+</div>
+
 <form action="/registration" method="post" id="registration-form">
     <p>Регистрация</p>
     <input type="text" name="lastname" placeholder="Введите фамилию...">
