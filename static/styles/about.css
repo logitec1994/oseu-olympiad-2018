@@ -8,55 +8,6 @@
     border: 1px solid red;
 }
 
-body *
-{
-    font-family: 'Montserrat', sans-serif;
-}
-
-header
-{
-    background-color: #336633;
-}
-
-.wrap
-{
-    width: 1200px;
-    margin: 0 auto;
-    /*border: 1px solid;*/
-}
-
-.wrap span
-{
-    padding: 4px;
-    margin: 2px;
-    cursor: pointer;
-}
-
-.menu ul
-{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu ul li
-{
-    display: inline-block;
-    padding: 4px;
-    margin: 2px;
-}
-
-.menu ul li a
-{
-    text-decoration: none;
-    color: white;
-}
-
-.menu ul li a:hover
-{
-    text-decoration: underline;
-}
-
 .content
 {
     width: 1200px;
@@ -69,7 +20,7 @@ header
 {
     width: 328px;
     height: 250px;
-    background-image: url(../img/oseu.png);
+    background-image: url("/static/resources/images/oseu.png");
     background-repeat: no-repeat;
     float: left;
 }
@@ -82,7 +33,7 @@ header
 
 .fac-logo
 {
-    background-image: url(../img/oseu-fkn.png);
+    background-image: url("/static/resources/images/oseu-fkn.png");
     width: 328px;
     height: 200px;
     float: left;
