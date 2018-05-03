@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/static/lib/fonts.css">
 
     <script src="/static/lib/jquery-3.3.1.min.js"></script>
+    <script src="/static/lib/auxiliary.js"></script>
 </head>
 <body>
     <header class="header">

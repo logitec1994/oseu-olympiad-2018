@@ -21,6 +21,12 @@ class CAuthorization
             "error/login": "Неправильный логин или пароль.",
             // "ok/login": ""
         };
+
+        this.months = {
+            ru: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"]
+        };
+
+        this.years = aux.range(1997, 2002);
     }
 
     static validate(form, inputs)
@@ -80,6 +86,20 @@ class CAuthorization
         }
     }
 
+    initializeDateFields(registration)
+    {
+        let years = this.years.map(e => $('<option/>', { value: e, text: e}));
+        registration.find('select[name=year]').append(years);
+
+        let months = this.months['ru'].map((e, i) => $('<option/>', { value: (i + 1), text: e}));
+        registration.find('select[name=month]').append(months);
+
+        let days = aux.range(1, (new Date(this.years[0], 1, 0).getDate()) + 1);
+        registration.find('select[name=day]').append(
+            days.map( e => $('<option/>', { value: e, text: e}))
+        );
+    }
+
     run()
     {
         let message = cookie.get('msg');
@@ -87,16 +107,36 @@ class CAuthorization
         if (!!message)
         {
             let m = decodeURIComponent(message).split(',');
-           this.statusHandler(m[0], m[1])
+            this.statusHandler(m[0], m[1])
         }
 
-        $('#registration-form').on('submit', (evt) => {
+        let registrationForm = $('#registration-form');
+        this.initializeDateFields(registrationForm);
+
+        registrationForm.on('submit', (evt) => {
             return this.registration(evt.currentTarget);
         });
 
         $('#login-form').on('submit', (evt) => {
             return this.login(evt.currentTarget);
         });
+
+        registrationForm.find('select').on('change', function(evt) {
+            let target = $(evt.target);
+            let parent = $(this).parent();
+            let year = parent.find('select[name=year]');
+            let month = parent.find('select[name=month]');
+            let day = parent.find('select[name=day]');
+
+            if (target.attr('name') !== day.attr('name'))
+            {
+                let days = aux.range(1, (new Date(year.val(), month.val(), 0).getDate()) + 1);
+
+                day.empty();
+                day.append(days.map( e => $('<option/>', { value: e, text: e})));
+            }
+        });
+
     }
 }
 
