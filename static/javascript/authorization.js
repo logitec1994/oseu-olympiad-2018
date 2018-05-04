@@ -144,8 +144,8 @@ $(function () {
     let app = new CAuthorization();
     app.run();
 
-    $(".wrap").on("click", ".tab", function() {
-        $(".wrap .tab").removeClass("active");
+    $(".form-wrapper").on("click", ".tab", function() {
+        $(".form-wrapper .tab").removeClass("active");
         $(this).addClass("active");
     });
 
