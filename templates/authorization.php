@@ -1,51 +1,47 @@
 <?php
 include_once 'templates/header.php'
 ?>
-<link rel="stylesheet" href="/static/styles/authorization.css">
+<link rel="stylesheet" href="/static/styles/form.css">
 <link rel="stylesheet" href="/static/lib/notify/notify.css">
 
 <script src="/static/lib/notify/notify.js"></script>
 <script src="/static/lib/cookies.js"></script>
 <script src="/static/javascript/authorization.js"></script>
 
-<div class="forms-wrapper">
-    <div class="wrap">
-        <label for="" title="Вкладка 1" class="tab active authorization">Авторизация</label>
-        <label for="" title="Вкладка 2" class="tab registration">Регистрация</label>
-
-        <form action="/login" method="post" id="login-form" class="tab-form">
-            <p>Вход</p>
-            <input type="email" name="email" placeholder="Введите E-mail...">
-            <input type="password" name="password" placeholder="Введите пароль...">
-            <input type="submit" value="Вход" name="login">
-            <ul>
-                <li><a href="#"><i class="fa fa-google"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a href="#"><i class="fa fa-vk"></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            </ul>
-        </form>
-        <form action="/registration" method="post" id="registration-form" class="tab-form hidden">
-            <p>Регистрация</p>
-            <input type="text" name="lastname" placeholder="Введите фамилию...">
-            <input type="text" name="firstname" placeholder="Введите имя...">
-            <input type="text" name="patronymic" placeholder="Введите отчество...">
-            <select name="year"></select>
-            <select name="month"></select>
-            <select name="day"></select>
-            <input type="email" name="email" placeholder="Ведите E-mail...">
-            <input type="password" name="password" placeholder="Введите пароль...">
-            <input type="password" name="re-password" placeholder="Повторите пароль...">
-            <input type="submit" value="Регистрация" name="registration">
-            <div class="recover">
-                <input type="checkbox">
-                <label for="">Я прочитал правила <a href="#">заполнения</a></label>
-            </div>
-        </form>
-    </div>
+<div class="wrapper">
+    <form class="form-signin" method="post">
+        <h2 class="form-signin-heading">Авторизация</h2>
+        <input type="email" class="form-control" name="email" placeholder="Введите E-mail..." required="" autofocus="">
+        <input type="password" class="form-control" name="password" placeholder="Введите пароль..." required=""/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+    </form>
 </div>
+
+<div class="wrapper">
+    <form class="form-signin" method="post">
+        <h2 class="form-signin-heading">Регистрация</h2>
+        <input type="text" class="form-control" name="lastname" placeholder="Введите фамилию..." required="" autofocus="" />
+        <input type="text" class="form-control" name="firstname" placeholder="Введите имя..." required=""/>
+        <input type="text" class="form-control" name="patronymic" placeholder="Введите отчество...">
+        <div class="date form-control">
+            <select name="year">
+                <option value="01">01</option>
+            </select>
+            <select name="month">
+                <option value="01">Январь</option>
+            </select>
+            <select name="day">
+                <option value="1997">1997</option>
+            </select>
+        </div>
+        <input type="email" class="form-control" name="email" placeholder="Ведите E-mail...">
+        <input type="password" class="form-control" name="password" placeholder="Введите пароль...">
+        <input type="password" class="form-control" name="re-password" placeholder="Повторите пароль...">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Зарегистрироваться</button>
+    </form>
+</div>
+
+
 
 <?php
 include_once 'templates/footer.php'

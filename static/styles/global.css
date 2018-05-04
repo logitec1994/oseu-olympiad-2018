@@ -17,55 +17,50 @@
     border: 1px solid red;
 }
 
-body *
+html,
+body
 {
-    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    width: 100%;
 }
-
 header
 {
-    display: block;
-    width: 320px;
-    height: 100vh;
-    background-color: #a5d6a7;
-    float: left;
-}
-
-header nav div.burger
-{
-    width: 25px;
-    height: 25px;
-    float: right;
-    line-height: 25px;
+    background-color: #333;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 200px;
     text-align: center;
-    font-size: 25px;
-    cursor: pointer;
-    color: #fff3e0;
+    z-index: 1000;
 }
 
-header ul
+header nav
+{
+    height: 100%;
+}
+
+header nav ul
 {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li
+{
+    padding: 4px;
     margin: 2px;
-    padding: 4px;
 }
 
-header ul li
-{
-    padding: 4px;
-}
 
-header ul li a
+.content-wrapper
 {
-    text-decoration: none;
-    color: #fff3e0;
-}
-header ul li a:hover
-{
-    color: #ffe0b2;
-}
-
-header ul li a i
-{
-    padding: 4px;
+    margin: 0 auto;
+    min-width: 500px;
+    width: calc(100% - 200px);
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 200px;
 }

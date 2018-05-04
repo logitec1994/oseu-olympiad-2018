@@ -6,11 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Main</title>
     <link rel="stylesheet" href="/static/lib/normalize.min.css">
+    <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="/static/styles/global.css">
     <link rel="stylesheet" href="/static/lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/lib/fonts.css">
 
     <script src="/static/lib/jquery-3.3.1.min.js"></script>
+    <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
     <script src="/static/lib/auxiliary.js"></script>
 </head>
 <body>
@@ -25,4 +27,5 @@
             </ul>
         </nav>
     </header>
+
     <div class="content-wrapper">

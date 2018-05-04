@@ -21,7 +21,8 @@ include_once 'templates/header.php'
                     <ul>
                         <li><span>Тел.:</span> (0482) 32-67-64, 32-67-57</li>
                         <li><span>Факс:</span> (0482) 32-67-64</li>
-                        <li><span>E-mail:</span> <span class="email">serbov@odeku.edu.ua</span>, <span class="email">abitur@odeku.edu.ua</span></li>
+                        <li><span>E-mail:</span> <span class="email">serbov@odeku.edu.ua</span></li>
+                        <li><span>E-mail:</span> <span class="email">abitur@odeku.edu.ua</span></li>
                     </ul>
                 </p>
                 <p>Комп’ютерні науки - Інтернет програмування - ЗНО: Українська мова та література Математика Іноземна мова або Фізика. Комп’ютерні науки - Інформаційні управляючі системи та технології - ЗНО: Українська мова та література Математика Іноземна мова або Фізика.</p>

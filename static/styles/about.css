@@ -10,18 +10,17 @@
 
 .content
 {
-    width: 1200px;
+    /*width: 1200px;*/
     margin: 0 auto;
-    /*background-color: rgb(230, 230, 230);*/
     padding: 1%;
+    text-align: justify;
 }
 
 .un-logo
 {
     width: 328px;
     height: 250px;
-    background-image: url("/static/resources/images/oseu.png");
-    background-repeat: no-repeat;
+    background: url("/static/resources/images/oseu.png") no-repeat;
     float: left;
 }
 
