@@ -18,13 +18,13 @@
 <body>
     <header class="header">
         <nav class="b-menu_vertical">
-            <div class="burger compressed"><i class="fa fa-ellipsis-v"></i></div>
             <ul>
                 <li><a href="/"><i class="fa fa-home"></i><span>Главная</span></a></li>
                 <li><a href="/events"><i class="fa fa-home"></i><span>События</span></a></li>
                 <li><a href="/authorization"><i class="fa fa-home"></i><span>Авторизация</span></a></li>
                 <li><a href="/about"><i class="fa fa-info"></i><span>О нас</span></a></li>
             </ul>
+            <div class="burger compressed"><i class="fa  fa-chevron-left"></i></div>
         </nav>
     </header>
 
