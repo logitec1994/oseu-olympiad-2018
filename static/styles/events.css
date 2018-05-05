@@ -149,6 +149,23 @@ div.presentation-section.named--home-adventures
     background-image: url('/static/resources/images/room.jpg');
 }
 
+div.section-wrapper {
+    width: 500px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+div.section-wrapper button {
+    /*background: #7376f1;*/
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+div.presentation-section .home-wrapper {
+
+}
+
 div.presentation-section.named--to-the-stars
 {
     background-image: url('/static/resources/images/stars.jpg');
