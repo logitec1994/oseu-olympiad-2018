@@ -5,7 +5,7 @@ $(function () {
 
     chevron.on('click', (e) => {
         header.toggleClass("folded");
-        cookie.set("imf", header.hasClass('folded'));
+        cookie.set("imf", Number(header.hasClass('folded')));
     });
 
     chevron.on('click', (e) => {

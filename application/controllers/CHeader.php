@@ -15,7 +15,7 @@ class CHeader extends CControllerBase
 
     public function get($args)
     {
-        $imf = self::getCookie(HEADER_MENU_STATE_COOKIE);
+        $imf = boolval(self::getCookie(HEADER_MENU_STATE_COOKIE));
 
         $menuState = $imf ? 'folded' : '';
         $menuChevronDirection = $imf ? 'fa-chevron-right' : 'fa-chevron-left';
