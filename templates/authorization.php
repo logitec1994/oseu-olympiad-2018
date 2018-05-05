@@ -1,6 +1,3 @@
-<?php
-include_once 'templates/header.php'
-?>
 <link rel="stylesheet" href="/static/styles/authorization.css">
 <link rel="stylesheet" href="/static/lib/notify/notify.css">
 
@@ -38,8 +35,3 @@ include_once 'templates/header.php'
         </form>
     </div>
 </div>
-
-
-<?php
-include_once 'templates/footer.php'
-?>

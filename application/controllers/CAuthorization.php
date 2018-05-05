@@ -18,7 +18,7 @@ class CAuthorization extends CControllerBase
 
     public function get($args)
     {
-        $cookie = self::getUserCookie();
+        $cookie = self::getCookie(ENGINE_SESSION_COOKIE_ID);
 
         if (!!$cookie && $this->model->getUserByCookie($cookie))
         {

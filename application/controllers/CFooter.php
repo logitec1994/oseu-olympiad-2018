@@ -4,7 +4,7 @@ include_once 'application/core/CControllerBase.php';
 include_once 'application/core/TViewBase.php';
 
 
-class CEvents extends CControllerBase
+class CFooter extends CControllerBase
 {
     use TViewBase;
 
@@ -14,7 +14,7 @@ class CEvents extends CControllerBase
 
     public function get($args)
     {
-        $this->render("events");
+        $this->render("footer");
     }
 
     public function post($args)

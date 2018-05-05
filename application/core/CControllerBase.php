@@ -24,13 +24,13 @@ abstract class CControllerBase
         }
     }
 
-    static public function getUserCookie()
+    static public function getCookie($key)
     {
         $cookie = null;
 
-        if (array_key_exists(ENGINE_SESSION_COOKIE_ID, $_COOKIE))
+        if (array_key_exists($key, $_COOKIE))
         {
-            $cookie = $_COOKIE[ENGINE_SESSION_COOKIE_ID];
+            $cookie = $_COOKIE[$key];
         }
 
         return $cookie;

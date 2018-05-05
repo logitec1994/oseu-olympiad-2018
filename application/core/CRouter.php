@@ -9,7 +9,7 @@ class CRouter
     {
     }
 
-    private function constructPage($page)
+    private function constructController($page)
     {
         $className = 'C' . ucwords($page);
         $include = 'application/controllers/' . $className . '.php';
@@ -30,7 +30,6 @@ class CRouter
     public function add($regex, $page, $args = array())
     {
         array_push($this->handlers, (object)array(
-            'object' => null,
             'page' => $page,
             'name' => $regex,
             'args' => $args
@@ -49,9 +48,17 @@ class CRouter
         try
         {
             $handler = $this->getRequestedHandler();
-            $handler->object = $this->constructPage($handler->page);
-            $handler->object->run($handler->args);
 
+            $pageElements = array(
+                $this->constructController("header"),
+                $this->constructController($handler->page),
+                $this->constructController("footer"),
+            );
+
+            foreach ($pageElements as $element)
+            {
+                $element->run($handler->args);
+            }
         }
         catch (Exception $e)
         {

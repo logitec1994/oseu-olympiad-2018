@@ -14,10 +14,11 @@
     <script src="/static/lib/jquery-3.3.1.min.js"></script>
     <script src="/static/lib/bootstrap/bootstrap.min.js"></script>
     <script src="/static/lib/auxiliary.js"></script>
-    <script src="/static/javascript/main.js"></script>
+    <script src="/static/lib/cookies.js"></script>
+    <script src="/static/javascript/global.js"></script>
 </head>
 <body>
-    <header class="header">
+    <header class="header <?= $menuState ?>">
         <div class="sidebar">
             <nav class="nav">
                 <div class="nav-item"><a href="/"><i class="fa fa-home"></i><span>Главная</span></a></div>
@@ -26,7 +27,7 @@
                 <div class="nav-item"><a href="/about"><i class="fa fa-info"></i><span>О нас</span></a></div>
             </nav>
             <div class="sidebar-mode-toggle">
-                <i class="fa fa-chevron-left"></i>
+                <i class="fa <?= $menuChevronDirection ?>"></i>
             </div>
         </div>
     </header>
