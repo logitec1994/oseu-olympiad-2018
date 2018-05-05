@@ -34,6 +34,7 @@ header
 {
     flex-basis: 200px;
     flex-flow: row nowrap;
+    flex-shrink: 0;
 }
 
 header.folded
@@ -44,7 +45,6 @@ header.folded
 
 main
 {
-    padding-left: 20px;
     flex-basis: 100%;
     flex-flow: row nowrap;
 }
