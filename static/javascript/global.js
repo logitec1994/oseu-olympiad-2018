@@ -9,6 +9,6 @@ $(function () {
     });
 
     chevron.on('click', (e) => {
-        chevron.find('i').toggleClass("fa-chevron-left fa-chevron-right")
+        chevron.find('i').toggleClass("fa-angle-double-left fa-angle-double-right")
     });
 });

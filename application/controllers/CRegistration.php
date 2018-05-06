@@ -29,19 +29,30 @@ class CRegistration extends CControllerBase
         $password = $this->model->escape($_POST['password']);
         $rePassword = $this->model->escape($_POST['re-password']);
 
-        $items = array($submit, $email, $firstName, $lastName, $patronymic, $password, $rePassword);
+        $year = $this->model->escape($_POST['year']);
+        $month = $this->model->escape($_POST['month']);
+        $day = $this->model->escape($_POST['day']);
+
+        $items = array(
+            $submit, $email, $firstName, $lastName, $patronymic,
+            $password, $rePassword, $year, $month, $day
+        );
 
         $filtred = array_filter($items, function ($item) {
             return empty($item);
         });
 
+        $filtred = ($filtred && checkdate(intval($year), intval($month), intval($day)));
+
         $message = "ok,registration";
 
         if (!$filtred)
         {
+            $birthdate = sprintf("%s-%s-%s", $year, $month, $day);
+
             if (!$this->model->checkMailExists($email))
             {
-                if(!$this->model->register($firstName, $lastName, $patronymic, $email, $password))
+                if(!$this->model->register($firstName, $lastName, $patronymic, $email, $password, $birthdate))
                 {
                     $message = "error,registration";
                 }

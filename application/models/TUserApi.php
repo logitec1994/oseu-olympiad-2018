@@ -17,6 +17,11 @@ trait TUserApi
         return ($ret && ($ret->num_rows == 1)) ? $ret->fetch_object() : null;
     }
 
+    public function isAuthorized($cookie)
+    {
+        return !!$this->getUserByCookie($cookie);
+    }
+
     public function getUserByAuthentication($email, $password) {
         $passwordHash = sha1(sprintf("%s:%s", $email, $password));
 

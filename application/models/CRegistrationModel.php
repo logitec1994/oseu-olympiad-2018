@@ -16,13 +16,13 @@ class CRegistrationModel extends CModelBase
         return $ret && ($ret->num_rows == 1);
     }
 
-    public function register($firstName, $lastName, $patronymic, $email, $password)
+    public function register($firstName, $lastName, $patronymic, $email, $password, $birthdate)
     {
         $passwordHash = sha1(sprintf("%s:%s", $email, $password));
 
         $ret = $this->link->query(
-            "INSERT INTO users (firstname, lastname, patronymic, email, password)
-                    VALUES ('$firstName', '$lastName', '$patronymic', '$email', '$passwordHash')");
+            "INSERT INTO users (firstname, lastname, patronymic, email, password, birthdate)
+                    VALUES ('$firstName', '$lastName', '$patronymic', '$email', '$passwordHash', '$birthdate')");
 
         return $ret && ($this->link->affected_rows == 1);
     }

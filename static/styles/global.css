@@ -59,6 +59,58 @@ header div.sidebar
     width: 200px;
 }
 
+header div.sidebar div.sidebar-user
+{
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: 0 auto;
+}
+
+header.folded div.sidebar div.sidebar-user
+{
+    padding: 1px;
+}
+
+header div.sidebar div.sidebar-user div.user-avatar
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-image: url(http://via.placeholder.com/50x50);
+    border-radius: 3px;
+    float: left;
+}
+
+header.folded div.sidebar div.sidebar-user div.user-avatar
+{
+    width: 30px;
+    height: 30px;
+    background-image: url(http://via.placeholder.com/30x30);
+}
+
+header div.sidebar div.sidebar-user div.user-name
+{
+    position: relative;
+    line-height: 25px;
+    text-align: left;
+    color: white;
+    padding-left: 50px;
+    display: block;
+}
+
+header div.sidebar div.sidebar-user div.user-lastname,
+header div.sidebar div.sidebar-user div.user-firstname
+{
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+header.folded div.sidebar div.sidebar-user div.user-name
+{
+    display: none;
+}
+
 header.folded div.sidebar
 {
     width: 32px;
@@ -75,11 +127,12 @@ header nav
 
 header.folded nav
 {
-    padding: 20px 0 52px !important;
+    padding: 0 !important;
 }
 
 header nav div.nav-item
 {
+    line-height: 32px;
     display: block;
     width: 100%;
 }
@@ -97,9 +150,10 @@ header.folded nav div.nav-item span
 header nav div.nav-item i
 {
     text-align: center;
-    line-height: 24px;
-    width: 24px;
-    height: 24px;
+    line-height: 32px;
+    width: 32px;
+    height: 32px;
+    float: left;
 }
 
 header.folded nav div.nav-item i
@@ -134,7 +188,12 @@ header div.sidebar div.sidebar-mode-toggle i
     float: right;
 }
 
-header div.sidebar div.sidebar-mode-toggle i:hover
+header div.sidebar div.sidebar-mode-toggle:hover
 {
     color: dodgerblue;
+}
+
+a
+{
+    outline: none;
 }

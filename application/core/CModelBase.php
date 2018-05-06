@@ -39,6 +39,7 @@ class CModelBase
           firstname VARCHAR(64) NOT NULL,
           lastname VARCHAR(64) NOT NULL,
           patronymic VARCHAR(64) NOT NULL,
+          birthdate DATE NOT NULL,
           password CHAR(40) NOT NULL 
         );";
 

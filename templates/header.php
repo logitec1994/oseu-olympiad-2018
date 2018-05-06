@@ -20,11 +20,50 @@
 <body>
     <header class="header <?= $menuState ?>">
         <div class="sidebar">
+            <?php if ($isAuthorized): ?>
+            <div class="sidebar-user">
+                <div class="user-avatar" title="><?= $userFirstName ?> <?= $userLastName ?>"></div>
+                <div class="user-name">
+                    <div class="user-lastname"><?= $userFirstName ?></div>
+                    <div class="user-firstname"><?= $userLastName ?></div>
+                </div>
+            </div>
+            <?php endif; ?>
             <nav class="nav">
-                <div class="nav-item"><a href="/"><i class="fa fa-home"></i><span>Главная</span></a></div>
-                <div class="nav-item"><a href="/events"><i class="fa fa-asterisk"></i><span>События</span></a></div>
-                <div class="nav-item"><a href="/authorization"><i class="fa fa-id-badge"></i><span>Авторизация</span></a></div>
-                <div class="nav-item"><a href="/about"><i class="fa fa-info"></i><span>О нас</span></a></div>
+                <div class="nav-item">
+                    <a href="/" title="Главная">
+                        <i class="fa fa-home"></i>
+                        <span>Главная</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="/events" title="События">
+                        <i class="fa fa-asterisk"></i>
+                        <span>События</span>
+                    </a>
+                </div>
+                <?php if (!$isAuthorized): ?>
+                <div class="nav-item">
+                    <a href="/authorization" title="Авторизация">
+                        <i class="fa fa-id-badge"></i>
+                        <span>Авторизация</span>
+                    </a>
+                </div>
+                <?php endif; ?>
+                <div class="nav-item">
+                    <a href="/about" title="О нас">
+                        <i class="fa fa-info"></i>
+                        <span>О нас</span>
+                    </a>
+                </div>
+                <?php if ($isAuthorized): ?>
+                <div class="nav-item">
+                    <a href="/logout" title="Выйти">
+                        <i class="fa fa-sign-out"></i>
+                        <span>Выйти</span>
+                    </a>
+                </div>
+                <?php endif; ?>
             </nav>
             <div class="sidebar-mode-toggle">
                 <i class="fa <?= $menuChevronDirection ?>"></i>
