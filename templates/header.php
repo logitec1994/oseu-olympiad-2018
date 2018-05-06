@@ -22,7 +22,7 @@
         <div class="sidebar">
             <?php if ($isAuthorized): ?>
             <div class="sidebar-user">
-                <div class="user-avatar" title="><?= $userFirstName ?> <?= $userLastName ?>"></div>
+                <div class="user-avatar" title="<?= $userFirstName ?> <?= $userLastName ?>"></div>
                 <div class="user-name">
                     <div class="user-lastname"><?= $userFirstName ?></div>
                     <div class="user-firstname"><?= $userLastName ?></div>
@@ -56,6 +56,14 @@
                         <span>О нас</span>
                     </a>
                 </div>
+                <?php if ($isAuthorized): ?>
+                    <div class="nav-item">
+                        <a href="/settings" title="Настройки">
+                            <i class="fa fa-gear"></i>
+                            <span>Настройки</span>
+                        </a>
+                    </div>
+                <?php endif; ?>
                 <?php if ($isAuthorized): ?>
                 <div class="nav-item">
                     <a href="/logout" title="Выйти">

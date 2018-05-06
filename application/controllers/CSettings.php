@@ -1,23 +1,23 @@
 <?php
 
 include_once 'application/core/CControllerBase.php';
+include_once 'application/core/CRouter.php';
+include_once 'application/models/CSettingsModel.php';
 include_once 'application/core/TViewBase.php';
 
-
-class CQuest extends CControllerBase
+class CSettings extends CControllerBase
 {
     use TViewBase;
+    private $model = null;
 
     function __construct($page)
     {
+        $this->model = new CSettingsModel();
     }
 
     public function get($args)
     {
-        $event = intval($args[0]);
-        $eventQuest = intval($args[1]);
-
-        $this->render("quest.{$event}.{$eventQuest}");
+        $this->render("settings");
     }
 
     public function post($args)

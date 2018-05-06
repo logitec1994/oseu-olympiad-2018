@@ -1,15 +1,11 @@
 "use strict";
 
-class CAuthorization
+class CSettings
 {
     constructor()
     {
-        this.mLoginFields = [
-            'email', 'password'
-        ];
-
-        this.mRegistrationFields = [
-            'lastname','firstname', 'patronymic', 'email', 'password', 're-password'
+        this.mSettingsFields = [
+            'lastname','firstname', 'patronymic', 'email', 'password', 'avatar'
         ];
 
         this.mStatuses = {
@@ -53,31 +49,8 @@ class CAuthorization
         return true;
     }
 
-    registration(form)
-    {
-        let status = CAuthorization.validate(form, this.mRegistrationFields);
-        let password = $(form).find('input[name=password]');
-        let re_password = $(form).find('input[name=re-password]');
-
-        status = (status && (password.val() === re_password.val()));
-
-        if (!status)
-        {
-            password.addClass('invalid');
-            re_password.addClass('invalid');
-        }
-
-        return status;
-    }
-
-    login(form)
-    {
-        return CAuthorization.validate(form, this.mLoginFields);
-    }
-
     statusHandler(status, item)
     {
-
         let statusMessage = this.mStatuses[`${status}/${item}`];
         if (!!statusMessage)
         {
@@ -110,18 +83,14 @@ class CAuthorization
             this.statusHandler(m[0], m[1])
         }
 
-        let registrationForm = $('#registration-form');
-        this.initializeDateFields(registrationForm);
+        let settingsForm = $('#settings-form');
+        this.initializeDateFields(settingsForm);
 
-        registrationForm.on('submit', (evt) => {
-            return this.registration(evt.currentTarget);
+        settingsForm.on('submit', (evt) => {
+            return CSettings.validate(evt.currentTarget, this.mSettingsFields);
         });
 
-        $('#login-form').on('submit', (evt) => {
-            return this.login(evt.currentTarget);
-        });
-
-        registrationForm.find('select').on('change', function(evt) {
+        settingsForm.find('select').on('change', function(evt) {
             let target = $(evt.target);
             let parent = $(this).parent();
             let year = parent.find('select[name=year]');
@@ -141,21 +110,6 @@ class CAuthorization
 }
 
 $(function () {
-    let app = new CAuthorization();
+    let app = new CSettings();
     app.run();
-
-    $(".form-wrapper").on("click", ".tab", function() {
-        $(".form-wrapper .tab").removeClass("active");
-        $(this).addClass("active");
-    });
-
-    $(".authorization").on("click", () => {
-        $("#login-form").removeClass("hidden");
-        $("#registration-form").addClass("hidden");
-    });
-
-    $(".registration").on("click", () => {
-        $("#registration-form").removeClass("hidden");
-        $("#login-form").addClass("hidden");
-    });
 });

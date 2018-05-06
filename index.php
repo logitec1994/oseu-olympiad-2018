@@ -20,15 +20,16 @@ include_once 'application/core/CRouter.php';
 $app = new CRouter();
 
 // Задаем маршруты указывающие на страницы
-$app->add("^/$",               "main");
-$app->add("^/authorization$",  "authorization");
-$app->add("^/registration$",   "registration");
-$app->add("^/login$",          "login");
-$app->add("^/logout$",         "logout");
-$app->add("^/events$",         "events");
-$app->add("^/quest/([1-3])$",  "quest");
-$app->add("^/about$",          "about");
-$app->add("^/error/(40[3-5])$","error");
+$app->add("^/$",                      "main");
+$app->add("^/authorization$",         "authorization");
+$app->add("^/registration$",          "registration");
+$app->add("^/login$",                 "login");
+$app->add("^/logout$",                "logout");
+$app->add("^/settings$",              "settings");
+$app->add("^/events$",                "events");
+$app->add("^/quest/([1-3])/([1-5])$", "quest");
+$app->add("^/about$",                 "about");
+$app->add("^/error/(40[3-5])$",       "error");
 
 // Запускаем роутер
 $app->run();
