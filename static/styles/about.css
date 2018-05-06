@@ -6,6 +6,17 @@ main.content
     text-align: justify;
 }
 
+main.content div.univer
+{
+    width: 700px;
+    margin: 0 auto;
+}
+main.content div.fac
+{
+    width: 700px;
+    margin: 0 auto;
+}
+
 .un-logo
 {
     width: 328px;
