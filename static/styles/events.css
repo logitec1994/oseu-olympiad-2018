@@ -67,7 +67,7 @@ div.presentation-nav div.section-title
 .nav-section > div.section-title {
     position: relative;
     top: -5px;
-    left: 55px;
+    left: 40px;
     color: #000;
     font-size: 6px;
     cursor: pointer;
@@ -85,7 +85,7 @@ div.presentation-nav div.section-title
 .nav-section > div.section-title::before {
     position: absolute;
     color: #555;
-    left: -45px;
+    left: -30px;
     font-size: 14px;
     font-weight: 300;
     padding-top: 20px;
@@ -128,14 +128,14 @@ div.presentation-section
 {
     position: relative;
     width: 100%;
-    height: 0;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     left: 0;
     top: 0;
-    display: block;
     transition: background .4s ease-in-out;
+    display: none;
 }
 
 div.presentation-section.section-active
@@ -150,8 +150,11 @@ div.presentation-section.named--home-adventures
 }
 
 div.section-wrapper {
-    width: 500px;
-    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
     font-size: 20px;
 }
 
@@ -161,6 +164,16 @@ div.section-wrapper button {
     outline: none;
     cursor: pointer;
 }
+
+div.home-event-wrap select {
+    background-color: #fff;
+    border: none;
+}
+
+div.home-event-wrap select option {
+    background-color: #fff;
+}
+
 
 div.presentation-section .home-wrapper {
 

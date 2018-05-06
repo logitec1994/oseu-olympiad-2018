@@ -13,9 +13,25 @@
     <div class="presentation-section named--home-adventures">
         <div class="home-wrapper section-wrapper">
             <div class="home-text">
-                <p>Погрузитесь в атмосферу желанного жизненного пути</p>
                 <p>Позвольте нам познакомить вас с нашим университетом</p>
-                <button class="btn btn-success">Приступить</button>
+                <div class="home-event-wrap">
+                    <p>В этом этапе вас ожидает ознакомление с университетом и городом</p>
+                    <ul>
+                        <li>Сбор документов
+                            <ul>
+                                <li>Документ подтверждающий личность</li>
+                                <li>Военный билет</li>
+                                <li>Экзаминационный листок</li>
+                                <li>Сертификат</li>
+                            </ul>
+                        </li>
+                        <li>Заполнение заявления</li>
+                    </ul>
+                </div>
+                <form action="/events" method="post">
+                    <input type="hidden" value="1">
+                    <input type="submit" class="btn btn-success" value="Приступить">
+                </form>
             </div>
         </div>
     </div>
@@ -30,14 +46,20 @@
                         <li>Приблизится к экзаменам</li>
                     </ul>
                 </p>
-                <button class="btn btn-success">Приступить</button>
+                <form action="/events" method="post">
+                    <input type="hidden" value="2">
+                    <input type="submit" class="btn btn-success" value="Приступить">
+                </form>
             </div>
         </div>
     </div>
     <div class="presentation-section named--gaudeamus-igitur">
         <div class="gaudeamus-wrapper section-wrapper">
             <div class="gaudeamus-text">
-                <button class="btn btn-success">Приступить</button>
+                <form action="/events" method="post">
+                    <input type="hidden" value="3">
+                    <input type="submit" class="btn btn-success" value="Приступить">
+                </form>
             </div>
         </div>
     </div>
