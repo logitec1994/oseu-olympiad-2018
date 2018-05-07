@@ -1,0 +1,42 @@
+#map {
+    width: 700px;
+    height: 400px;
+    background-color: grey;
+}
+
+div.photo
+{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 280px;
+    transition: all 1s 0.3s;
+}
+
+div.photo:hover
+{
+    width: 590px;
+    transition: all 0.7s;
+}
+
+div.photo div.text-disc
+{
+    position: absolute;
+    left: 305px;
+    top: 0;
+    /*display: none;*/
+}
+
+div.photo div.text-disc ul
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.photo img
+{
+    cursor: pointer;
+    width: 300px;
+}

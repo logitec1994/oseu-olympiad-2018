@@ -1,7 +1,8 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: User
- * Date: 07.05.2018
- * Time: 10:51
- */
+<link rel="stylesheet" href="/static/styles/quests.css">
+<link rel="stylesheet" href="/static/styles/quest.1.5.css">
+<script src="/static/javascript/quest.1.5.js"></script>
+
+<form action="#" method="post">
+    <input type="hidden">
+    <input type="submit" value="Завершить квест">
+</form>

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/static/styles/quests.css">
 <link rel="stylesheet" href="/static/styles/quest.1.1.css">
 <script src="/static/javascript/quest.1.1.js"></script>
 
@@ -27,5 +28,9 @@
                             <label for="teacher"><span>Учитель в школе: <input type="radio" name="invite" id="teacher"></span></label>
                         </p>
                     </span>
+    <form action="#" method="post">
+        <input type="hidden">
+        <input type="submit" value="Продолжить">
+    </form>
 </div>
 
