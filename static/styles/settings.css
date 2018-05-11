@@ -1,0 +1,30 @@
+main.main
+{
+    max-width: 500px;
+    margin: 25% auto;
+}
+
+main.main form input,
+main.main form div
+{
+    margin: 6px;
+}
+
+main.main form div select
+{
+    background-color: #fff;
+    border: none;
+    width: 32%;
+}
+
+main.main form input[type="file"]
+{
+    display: none;
+}
+
+.fileContainer
+{
+    margin: 100px 6px 6px 6px;
+    padding: .375rem .75rem;
+    cursor: pointer;
+}

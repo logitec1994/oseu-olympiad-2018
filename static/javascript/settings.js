@@ -10,7 +10,6 @@ class CSettings
 
         this.mStatuses = {
             "ok/registration": "Регистация прошла успешно, войдите.",
-
             "error/registration": "Сервера при регистрации.",
             "error/exists": "Эта электронная почта уже используется.",
             "error/fields": "Не все поля заполнены правильно.",
@@ -106,6 +105,11 @@ class CSettings
             }
         });
 
+
+        $('input[type=file]').on('change', function () {
+            let file = $('input[type=file]')[0].files[0].name;
+            $("label.fileContainer").text(file);
+        });
     }
 }
 
