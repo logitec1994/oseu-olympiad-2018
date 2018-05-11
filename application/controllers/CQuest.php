@@ -17,7 +17,7 @@ class CQuest extends CControllerBase
         $event = intval($args[0]);
         $eventQuest = intval($args[1]);
 
-        $this->render("quest.{$event}.{$eventQuest}");
+        $this->render("quests/{$event}/{$eventQuest}");
     }
 
     public function post($args)
