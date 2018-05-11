@@ -50,12 +50,6 @@
                     </a>
                 </div>
                 <?php endif; ?>
-                <div class="nav-item">
-                    <a href="/about" title="О нас">
-                        <i class="fa fa-info"></i>
-                        <span>О нас</span>
-                    </a>
-                </div>
                 <?php if ($isAuthorized): ?>
                     <div class="nav-item">
                         <a href="/settings" title="Настройки">
@@ -64,6 +58,20 @@
                         </a>
                     </div>
                 <?php endif; ?>
+                <?php if ($isAuthorized && $isUserAdmin): ?>
+                    <div class="nav-item">
+                        <a href="/users" title="Пользователи">
+                            <i class="fa fa-users"></i>
+                            <span>Пользователи</span>
+                        </a>
+                    </div>
+                <?php endif; ?>
+                <div class="nav-item">
+                    <a href="/about" title="О нас">
+                        <i class="fa fa-info"></i>
+                        <span>О нас</span>
+                    </a>
+                </div>
                 <?php if ($isAuthorized): ?>
                 <div class="nav-item">
                     <a href="/logout" title="Выйти">
@@ -74,7 +82,7 @@
                 <?php endif; ?>
             </nav>
             <div class="sidebar-mode-toggle">
-                <i class="fa <?= $menuChevronDirection ?>"></i>
+                <i class="fa fa-angle-double-<?= $menuChevronDirection ?>"></i>
             </div>
         </div>
     </header>

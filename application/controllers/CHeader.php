@@ -29,20 +29,21 @@ class CHeader extends CControllerBase
         $imf = boolval(self::getCookie(HEADER_MENU_STATE_COOKIE));
 
         $menuState = $imf ? 'folded' : '';
-        $menuChevronDirection = $imf ? 'fa-angle-double-right' : 'fa-angle-double-left';
+        $menuChevronDirection = $imf ? 'right' : 'left';
 
         $user = $this->model->getUserByCookie($session);
 
         $data = array(
             'menuChevronDirection' => $menuChevronDirection,
             'menuState' => $menuState,
-            'isAuthorized' => !!$user
+            'isAuthorized' => !!$user,
         );
 
         if (!!$user)
         {
             $data['userLastName'] = $user->lastname;
             $data['userFirstName'] = $user->firstname;
+            $data['isUserAdmin'] = $this->model->isUserHasRole($user->id, 'admin');
         }
 
         $this->render("header", $data);

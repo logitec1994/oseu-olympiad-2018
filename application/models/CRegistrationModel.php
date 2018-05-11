@@ -24,6 +24,18 @@ class CRegistrationModel extends CModelBase
             "INSERT INTO users (firstname, lastname, patronymic, email, password, birthdate)
                     VALUES ('$firstName', '$lastName', '$patronymic', '$email', '$passwordHash', '$birthdate')");
 
-        return $ret && ($this->link->affected_rows == 1);
+        $isRegistred = ($ret && ($this->link->affected_rows == 1));
+
+        if ($isRegistred)
+        {
+            $uiid = mysqli_insert_id($this->link);
+            $ret = $this->link->query(
+                "INSERT INTO access (uiid, riid) VALUES ($uiid, (SELECT id FROM roles WHERE role = 'user'))
+            ");
+
+            $isRegistred = ($isRegistred && ($ret && ($this->link->affected_rows == 1)));
+        }
+
+        return $isRegistred;
     }
 }
