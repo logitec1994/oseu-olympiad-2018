@@ -21,9 +21,9 @@
             <input type="text" class="form-control" name="firstname" placeholder="Введите имя..." required=""/>
             <input type="text" class="form-control" name="patronymic" placeholder="Введите отчество...">
             <div class="date form-control">
-                <select name="year"></select>
-                <select name="month"></select>
-                <select name="day"></select>
+                <select class="custom-select" name="year"></select>
+                <select class="custom-select" name="month"></select>
+                <select class="custom-select" name="day"></select>
             </div>
             <input type="email" class="form-control" name="email" placeholder="Ведите E-mail...">
             <input type="password" class="form-control" name="password" placeholder="Введите пароль...">
