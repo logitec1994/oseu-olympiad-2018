@@ -18,6 +18,6 @@
     <label class="fileContainer" for="user-photo">
         Chose youre avatar
     </label>
-    <input type="file" id="user-photo" class="form-control-file" accept=".png,.jpg,.jpeg" name="avatar">
+    <input type="file" id="user-photo" class="form-control-file btn btn-primary" accept=".png,.jpg,.jpeg" name="avatar">
     <input type="submit" value="Обновить" class="btn btn-primary" name="update">
 </form>
