@@ -5,15 +5,15 @@
 <script src="/static/javascript/settings.js"></script>
 
 <form action="/settings" enctype="multipart/form-data" method="post" id="settings-form">
-    <input type="text" class="form-control" name="lastname" placeholder="Введите фамилию..." required="" autofocus="" />
-    <input type="text" class="form-control" name="firstname" placeholder="Введите имя..." required=""/>
-    <input type="text" class="form-control" name="patronymic" placeholder="Введите отчество...">
+    <input type="text" class="form-control" name="lastname" placeholder="Введите фамилию..." required="" autofocus="" value="<?= $user->lastname ?>" />
+    <input type="text" class="form-control" name="firstname" placeholder="Введите имя..." required="" value="<?= $user->firstname ?>" />
+    <input type="text" class="form-control" name="patronymic" placeholder="Введите отчество..." value="<?= $user->patronymic ?>" >
     <div class="date form-control">
         <select class="custom-select" name="year"></select>
         <select class="custom-select" name="month"></select>
         <select class="custom-select" name="day"></select>
     </div>
-    <input type="email" class="form-control" name="email" placeholder="Ведите E-mail...">
+    <input type="email" class="form-control" name="email" placeholder="Ведите E-mail..." value="<?= $user->email ?>">
     <input type="password" class="form-control" name="password" placeholder="Введите пароль...">
     <label class="fileContainer" for="user-photo">
         Chose youre avatar

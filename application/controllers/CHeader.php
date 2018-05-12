@@ -4,6 +4,7 @@ include_once 'application/core/CControllerBase.php';
 include_once 'application/core/TViewBase.php';
 include_once 'application/models/CHeaderModel.php';
 include_once 'application/config/Session.php';
+include_once 'application/core/fs.php';
 
 define('HEADER_MENU_STATE_COOKIE', 'imf');
 
@@ -44,6 +45,13 @@ class CHeader extends CControllerBase
             $data['userLastName'] = $user->lastname;
             $data['userFirstName'] = $user->firstname;
             $data['isUserAdmin'] = $this->model->isUserHasRole($user->id, 'admin');
+            $data['userAvatar'] = '/static/resources/images/user.png';
+
+            $avatar = sprintf("%s/%s-av.png", ENGINE_FILE_UPLOAD_DIRECTORY, $user->id);
+            if (file_exists($avatar))
+            {
+                $data['userAvatar'] = $avatar;
+            }
         }
 
         $this->render("header", $data);

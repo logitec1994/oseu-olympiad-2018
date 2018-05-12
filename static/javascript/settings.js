@@ -9,12 +9,12 @@ class CSettings
         ];
 
         this.mStatuses = {
-            "ok/registration": "Регистация прошла успешно, войдите.",
-            "error/registration": "Сервера при регистрации.",
+            "ok/update": "Обновление прошло успешно.",
+            "error/update": "Сервера при обновлении.",
             "error/exists": "Эта электронная почта уже используется.",
             "error/fields": "Не все поля заполнены правильно.",
-            "error/login": "Неправильный логин или пароль.",
-            // "ok/login": ""
+            "error/image": "Изображение не загружено.",
+            "error/image-type": "Используйте изображения формата: png,jpg,jpeg.",
         };
 
         this.months = {
@@ -58,16 +58,16 @@ class CSettings
         }
     }
 
-    initializeDateFields(registration)
+    initializeDateFields(update)
     {
         let years = this.years.map(e => $('<option/>', { value: e, text: e}));
-        registration.find('select[name=year]').append(years);
+        update.find('select[name=year]').append(years);
 
         let months = this.months['ru'].map((e, i) => $('<option/>', { value: (i + 1), text: e}));
-        registration.find('select[name=month]').append(months);
+        update.find('select[name=month]').append(months);
 
         let days = aux.range(1, (new Date(this.years[0], 1, 0).getDate()) + 1);
-        registration.find('select[name=day]').append(
+        update.find('select[name=day]').append(
             days.map( e => $('<option/>', { value: e, text: e}))
         );
     }
@@ -105,9 +105,8 @@ class CSettings
             }
         });
 
-
-        $('input[type=file]').on('change', function () {
-            let file = $('input[type=file]')[0].files[0].name;
+        $('input[type=file]').on('change', function() {
+            let file = $(this)[0].files[0].name;
             $("label.fileContainer").text(file);
         });
     }

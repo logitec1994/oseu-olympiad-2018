@@ -22,7 +22,8 @@
         <div class="sidebar">
             <?php if ($isAuthorized): ?>
             <div class="sidebar-user">
-                <div class="user-avatar" title="<?= $userFirstName ?> <?= $userLastName ?>"></div>
+                <div class="user-avatar" title="<?= $userFirstName ?> <?= $userLastName ?>"
+                     style="background-image: url('<?= $userAvatar ?>');"></div>
                 <div class="user-name">
                     <div class="user-lastname"><?= $userFirstName ?></div>
                     <div class="user-firstname"><?= $userLastName ?></div>
