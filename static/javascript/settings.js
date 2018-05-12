@@ -55,6 +55,7 @@ class CSettings
         {
             let statusType = (status === "ok" ? "Инфо" : "Ошибка");
             Notify.show(statusType, statusMessage, 5);
+            cookie.remove('msg');
         }
     }
 
