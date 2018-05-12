@@ -50,7 +50,7 @@ class CHeader extends CControllerBase
             $avatar = sprintf("%s/%s-av.png", ENGINE_FILE_UPLOAD_DIRECTORY, $user->id);
             if (file_exists($avatar))
             {
-                $data['userAvatar'] = $avatar;
+                $data['userAvatar'] = sprintf("/%s", $avatar);
             }
         }
 
